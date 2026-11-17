@@ -124,3 +124,12 @@ def test_generated_data_matches_answer_key_with_no_false_positives():
 
 def test_generator_is_deterministic():
     assert generate()[0].equals(generate()[0]) and generate()[1].equals(generate()[1])
+
+
+def test_unexplained_residual_is_zero_across_multiple_seeds():
+    """Verify reconciliation invariance (bridge residual is always 0.00 across multiple seeds)."""
+    for seed in range(2020, 2045):
+        p, b, _ = generate(seed=seed)
+        r = reconcile(p, b)
+        assert r.bridge["unexplained"] == 0
+
