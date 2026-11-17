@@ -1,0 +1,52 @@
+{
+  "A_timing_next_month": {
+    "txn_id": "TXN-CUT-0001",
+    "amount": "18250.00",
+    "status": "TIMING_NEXT_MONTH"
+  },
+  "B_rounding": {
+    "txn_ids": [
+      "TXN-RND-0001",
+      "TXN-RND-0002",
+      "TXN-RND-0003",
+      "TXN-RND-0004",
+      "TXN-RND-0005",
+      "TXN-RND-0006",
+      "TXN-RND-0007",
+      "TXN-RND-0008",
+      "TXN-RND-0009",
+      "TXN-RND-0010",
+      "TXN-RND-0011",
+      "TXN-RND-0012",
+      "TXN-RND-0013",
+      "TXN-RND-0014",
+      "TXN-RND-0015",
+      "TXN-RND-0016",
+      "TXN-RND-0017",
+      "TXN-RND-0018",
+      "TXN-RND-0019",
+      "TXN-RND-0020"
+    ],
+    "net_difference": "-0.100",
+    "status": "ROUNDING_DIFF"
+  },
+  "C_duplicate": {
+    "txn_id": "TXN-DUP-0001",
+    "dataset": "bank",
+    "amount": "749.00",
+    "status": "DUPLICATE_BANK"
+  },
+  "D_orphan_refund": {
+    "txn_id": "RFD-ORPH-0001",
+    "refund_ref": "TXN-NOEXIST-99",
+    "status": "ORPHAN_REFUND"
+  },
+  "extra_missing_settlement": {
+    "txn_id": "TXN-MISS-0001",
+    "status": "MISSING_SETTLEMENT"
+  },
+  "extra_bank_only": {
+    "txn_id": "TXN-GHOST-0001",
+    "status": "BANK_ONLY"
+  }
+}
